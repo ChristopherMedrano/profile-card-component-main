@@ -45,12 +45,15 @@ main{
 }
 
 .card{
+    
     width: 22em;
     border-radius: 1em;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-image: url(images/bg-pattern-card.svg);
+    margin-left: .5em;
+    margin-right: .5em;
     overflow: hidden;
 }
 
@@ -120,3 +123,18 @@ main{
     margin: 1em 2em;
 }
 
+@media only screen and (max-width: 480px){
+    body {
+
+        /* Background Circles */
+        background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+        background-position: top -350px left -400px, bottom -300px right -400px;
+        background-size: 600px 600px, 600px 600px;
+        background-repeat: no-repeat, no-repeat;
+    }
+    
+    .card{
+        width: 100%;
+        margin: auto;
+    }
+}
